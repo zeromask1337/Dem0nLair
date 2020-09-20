@@ -1,2 +1,11 @@
-//font-family: 'Montserrat', sans-serif;
 @import "optional";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: white;
+    font-family: "Montserrat";
+}
