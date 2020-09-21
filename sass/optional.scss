@@ -4,6 +4,11 @@ $desert-night: #02152c;
 $desert-sand: #c75306;
 $h2-color: rgba(255, 255, 255, 0.7);
 
+//Modificators
+.sand {
+    color: $desert-sand;
+}
+
 //Font configuration
 
 :root {
