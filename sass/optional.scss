@@ -4,6 +4,11 @@ $desert-night: #02152c;
 $desert-sand: #c75306;
 $h2-color: rgba(255, 255, 255, 0.7);
 
+//Sizes
+$macbook: "screen and (max-width: 1440px)";
+$ipad: "screen and (max-width: 1024px)";
+$iphone: "screen and (max-width: 600px)";
+
 //Modificators
 .sand {
     color: $desert-sand;
@@ -28,6 +33,10 @@ $h2-color: rgba(255, 255, 255, 0.7);
 
 html {
     font-size: 16px;
+
+    @media #{$ipad} {
+        font-size: 13px;
+    }
 }
 
 body {
@@ -85,6 +94,14 @@ h6 {
     font-style: italic;
     font-family: "le-monde-livre-classic-byol", serif !important;
     letter-spacing: 0px !important;
+}
+
+//Mixins
+@mixin secondary-text {
+    font-style: italic;
+    font-weight: medium;
+    font-size: 1.3333em;
+    color: $h2-color;
 }
 
 //Misc
