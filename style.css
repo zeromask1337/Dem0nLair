@@ -6,6 +6,8 @@ html { font-size: 16px; }
 
 @media screen and (max-width: 1024px) { html { font-size: 13px; } }
 
+@media screen and (max-width: 414px) { html { font-size: 10px; } }
+
 body { font-size: 0.875em; }
 
 p { line-height: var(--vspace); }
@@ -30,21 +32,23 @@ body { margin: 0; color: white; font-family: "Montserrat"; display: flex; flex-f
 
 @media screen and (max-width: 1024px) { body { display: block; } }
 
-.wrapper { background-color: #02152c; max-width: 1044px; margin: 60px 0; padding: 0 90px 0 65px; display: grid; grid-template-rows: repeat(5, auto); }
+.wrapper { background-color: #02152c; max-width: calc(min(100%, 1044px)); margin: 60px 0; padding: 0 90px 0 65px; display: grid; grid-template-rows: repeat(5, auto); }
 
 @media screen and (max-width: 1024px) { .wrapper { margin: 0; } }
+
+@media screen and (max-width: 414px) { .wrapper { padding: 0; } }
 
 section { margin: 0 0 150px 0; }
 
 .intro__title { width: 60%; margin-bottom: 0; }
 
+@media screen and (max-width: 414px) { .intro__title { width: 100%; } }
+
 .intro__subtitle { font-style: italic; }
 
-.android { justify-self: end; }
+.android-wrapper { width: clamp(272px, 50%, 440px); height: clamp(179px, 30vw, 290px); position: relative; display: grid; grid-template-rows: repeat(3, 1fr); border: 4px solid #c75306; }
 
-.android-wrapper { width: 440px; height: 290px; position: relative; display: grid; grid-template-rows: repeat(3, 1fr); border: 4px solid #c75306; overflow: hidden; }
-
-.android-wrapper img { max-width: 170px; max-height: 170px; grid-row: 1/3; justify-self: center; }
+.android-wrapper img { width: clamp(112px, 45%, 170px); height: clamp(112px, 20vw, 170px); grid-row: 1/3; justify-self: center; }
 
 .android-wrapper .android-chat { display: flex; flex-flow: column; justify-content: center; background-color: #c75306; }
 
@@ -62,7 +66,7 @@ section { margin: 0 0 150px 0; }
 
 .projects-wrapper .project-card__content { font-style: italic; font-weight: medium; font-size: 1.3333em; color: rgba(255, 255, 255, 0.7); padding: 15px; margin: 0; }
 
-.contact-card { display: flex; flex-flow: column; gap: 45px; width: 445px; height: 260px; margin: 160px auto; background-color: #c75306; }
+.contact-card { display: flex; flex-flow: column; gap: 45px; width: clamp(260px, 45%, 445px); height: clamp(200px, 20vw, 260px); margin: 160px auto; background-color: #c75306; }
 
 .contact-card__title { margin: 0; padding: 20px 0 0 22px; }
 

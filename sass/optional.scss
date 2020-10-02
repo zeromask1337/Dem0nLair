@@ -7,7 +7,7 @@ $h2-color: rgba(255, 255, 255, 0.7);
 //Sizes
 $macbook: "screen and (max-width: 1440px)";
 $ipad: "screen and (max-width: 1024px)";
-$iphone: "screen and (max-width: 600px)";
+$iphone: "screen and (max-width: 414px)";
 
 //Modificators
 .sand {
@@ -36,6 +36,10 @@ html {
 
     @media #{$ipad} {
         font-size: 13px;
+    }
+
+    @media #{$iphone} {
+        font-size: 10px;
     }
 }
 
