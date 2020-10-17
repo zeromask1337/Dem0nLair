@@ -37,6 +37,15 @@ body {
 
 section {
     margin: 0 0 150px 0;
+
+    @media #{$iphone} {
+        h1,
+        h2 {
+            padding-left: 10px;
+        }
+
+        margin: 0 0 75px 0;
+    }
 }
 
 .intro {
@@ -51,43 +60,6 @@ section {
 
     &__subtitle {
         font-style: italic;
-    }
-}
-
-.android {
-    &-wrapper {
-        width: clamp(272px, 50%, 440px);
-        height: clamp(179px, 30vw, 290px);
-        // width: 440px;
-        // height: 290px;
-        position: relative;
-
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-
-        border: $card-border;
-
-        img {
-            width: clamp(112px, 45%, 170px);
-            height: clamp(112px, 20vw, 170px);
-
-            grid-row: 1/3;
-            justify-self: center;
-        }
-
-        .android-chat {
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-
-            background-color: $desert-sand;
-
-            h2 {
-                margin: 0 0 0 13px;
-
-                background-color: $desert-sand;
-            }
-        }
     }
 }
 
@@ -142,13 +114,16 @@ section {
         flex-flow: column;
         gap: 45px;
 
-        // width: 445px;
-        // height: 260px;
-        width: clamp(260px, 45%, 445px);
-        height: clamp(200px, 20vw, 260px);
+        height: 260px;
+        width: calc(min(100%, 445px));
+        // height: clamp(200px, 20vw, 260px);
         margin: 160px auto;
 
         background-color: $desert-sand;
+
+        @media #{$iphone} {
+            margin: 75px auto;
+        }
 
         &__title {
             margin: 0;
@@ -187,5 +162,9 @@ section {
                 margin: 0 0 20px 0;
             }
         }
+    }
+
+    @media #{$iphone} {
+        padding-left: 0;
     }
 }
