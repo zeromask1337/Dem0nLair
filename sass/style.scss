@@ -68,8 +68,13 @@ section {
     flex-flow: row;
     gap: 40px;
 
+    @media #{$iphone} {
+        flex-flow: column;
+        margin-top: 100px;
+    }
+
     .project-card {
-        width: 440px;
+        width: calc(min(440px, 100%));
         height: 260px;
         display: grid;
         grid-template-rows: repeat(4, 1fr);
@@ -138,7 +143,9 @@ section {
 
             padding: 0 22px;
 
-            // font-size: 21.3px;
+            & > * {
+                font-size: 18.6px;
+            }
         }
 
         &-info__name {
