@@ -28,6 +28,8 @@ body { margin: 0; color: white; font-family: "Montserrat"; display: flex; flex-f
 
 @media screen and (max-width: 1024px) { body { display: block; } }
 
+@media screen and (max-width: 414px) { body { background-color: #02152c; } }
+
 .wrapper { background-color: #02152c; width: calc(min(100%, 1044px)); margin: 60px 0; padding: 0 90px 0 65px; display: grid; grid-template-rows: repeat(5, auto); }
 
 @media screen and (max-width: 1024px) { .wrapper { margin: 0; } }
