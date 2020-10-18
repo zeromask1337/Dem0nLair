@@ -6,6 +6,10 @@ body { font-size: 16px; }
 
 p { line-height: var(--vspace); }
 
+h1 { margin-top: 0; }
+
+h1:nth-child(1) { margin-top: clamp(30px, 3vw, 53px); }
+
 h4, h5, h6 { line-height: var(--vspace); }
 
 h2 { line-height: 1em; font-size: 2.6458em; font-weight: lighter; font-style: italic; word-break: break-word; color: rgba(255, 255, 255, 0.7); }
@@ -44,11 +48,13 @@ section { margin-bottom: clamp(69px, 3vw, 150px); }
 
 .intro__subtitle { font-style: italic; }
 
-.projects-wrapper { display: flex; flex-flow: row; gap: 40px; }
+.projects-wrapper { display: flex; flex-flow: row; }
 
 @media screen and (max-width: 414px) { .projects-wrapper { flex-flow: column; align-items: center; margin-top: 100px; } }
 
-.projects-wrapper .project-card { width: calc(min(440px, 95%)); height: 260px; display: grid; grid-template-rows: repeat(4, 1fr); border: 4px solid #c75306; text-decoration: none; }
+.projects-wrapper .project-card { width: calc(min(440px, 95%)); height: 260px; display: grid; grid-template-rows: repeat(4, 1fr); border: 4px solid #c75306; text-decoration: none; margin: 0 40px 0 0; }
+
+@media screen and (max-width: 414px) { .projects-wrapper .project-card { margin: 0 0 40px 0; } }
 
 .projects-wrapper .project-card__title { display: flex; flex-flow: row; justify-content: space-between; align-items: center; padding: 0 15px; height: clamp(52px, 5vh, 72px); background-color: #c75306; }
 
@@ -58,11 +64,11 @@ section { margin-bottom: clamp(69px, 3vw, 150px); }
 
 .projects-wrapper .project-card__content { font-style: italic; font-weight: medium; color: rgba(255, 255, 255, 0.7); padding: 15px; margin-bottom: 40px; }
 
-.contact-card { display: flex; flex-flow: column; gap: 45px; height: 260px; width: calc(min(100vw, 445px)); margin: 160px auto; background-color: #c75306; }
+.contact-card { display: flex; flex-flow: column; height: 260px; width: calc(min(100vw, 445px)); margin: 160px auto; background-color: #c75306; }
 
 @media screen and (max-width: 414px) { .contact-card { margin: 75px auto; } }
 
-.contact-card__title { margin: 0; padding: 20px 0 0 22px; }
+.contact-card__title { margin: 0 0 45px 0; padding: 20px 0 0 22px; }
 
 .contact-card__info { display: flex; flex-flow: row; justify-content: space-between; padding: 0 22px; }
 

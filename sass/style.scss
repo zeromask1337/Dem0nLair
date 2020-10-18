@@ -72,7 +72,6 @@ section {
 .projects-wrapper {
     display: flex;
     flex-flow: row;
-    gap: 40px;
 
     @media #{$iphone} {
         flex-flow: column;
@@ -89,6 +88,12 @@ section {
         border: $card-border;
 
         text-decoration: none;
+
+        margin: 0 40px 0 0;
+
+        @media #{$iphone} {
+            margin: 0 0 40px 0;
+        }
 
         &__title {
             display: flex;
@@ -130,7 +135,7 @@ section {
     &-card {
         display: flex;
         flex-flow: column;
-        gap: 45px;
+        // gap: 45px;
 
         height: 260px;
         width: calc(min(100vw, 445px));
@@ -143,8 +148,7 @@ section {
         }
 
         &__title {
-            margin: 0;
-
+            margin: 0 0 45px 0;
             padding: 20px 0 0 22px;
         }
 

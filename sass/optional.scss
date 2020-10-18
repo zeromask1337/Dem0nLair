@@ -33,22 +33,18 @@ $iphone: "screen and (max-width: 414px)";
 
 body {
     font-size: 16px;
-
-    // @media #{$ipad} {
-    //     font-size: 13px;
-    // }
-
-    // @media #{$iphone} {
-    //     font-size: 9px;
-    // }
 }
-
-// body {
-//     font-size: 0.875em;
-// }
 
 p {
     line-height: var(--vspace);
+}
+
+h1 {
+    margin-top: 0;
+
+    &:nth-child(1) {
+        margin-top: clamp(30px, 3vw, 53px);
+    }
 }
 
 h4,
