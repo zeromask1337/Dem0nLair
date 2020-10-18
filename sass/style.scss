@@ -19,7 +19,7 @@ body {
 
 .wrapper {
     background-color: $desert-night;
-    max-width: calc(min(100%, 1044px));
+    width: calc(min(100%, 1044px));
     margin: 60px 0;
     padding: 0 90px 0 65px;
 
@@ -36,16 +36,22 @@ body {
 }
 
 section {
-    margin: 0 0 150px 0;
+    margin-bottom: clamp(69px, 3vw, 150px);
 
     @media #{$iphone} {
         h1,
         h2 {
             padding-left: 10px;
         }
-
-        margin: 0 0 75px 0;
     }
+}
+
+.section-title {
+    font-size: clamp(38px, 5vw, 84.6px);
+}
+
+.section-content {
+    font-size: clamp(18.6px, 2vw, 42.3px);
 }
 
 .intro {
@@ -70,16 +76,19 @@ section {
 
     @media #{$iphone} {
         flex-flow: column;
+        align-items: center;
         margin-top: 100px;
     }
 
     .project-card {
-        width: calc(min(440px, 100%));
+        width: calc(min(440px, 95%));
         height: 260px;
         display: grid;
         grid-template-rows: repeat(4, 1fr);
 
         border: $card-border;
+
+        text-decoration: none;
 
         &__title {
             display: flex;
@@ -88,13 +97,17 @@ section {
             align-items: center;
 
             padding: 0 15px;
+            height: clamp(52px, 5vh, 72px);
 
             background-color: $desert-sand;
 
             h2 {
                 margin: 0;
+                padding-left: 0;
+
                 font-style: normal;
                 font-weight: bold;
+                font-size: clamp(28px, 2vw, 42.3px);
                 color: white;
             }
 
@@ -108,7 +121,7 @@ section {
             @include secondary-text;
 
             padding: 15px;
-            margin: 0;
+            margin-bottom: 40px;
         }
     }
 }
@@ -120,8 +133,7 @@ section {
         gap: 45px;
 
         height: 260px;
-        width: calc(min(100%, 445px));
-        // height: clamp(200px, 20vw, 260px);
+        width: calc(min(100vw, 445px));
         margin: 160px auto;
 
         background-color: $desert-sand;
@@ -163,10 +175,14 @@ section {
             display: flex;
             flex-flow: column;
 
-            @include secondary-text;
+            @media #{$iphone} {
+                text-align: right;
+            }
 
             * {
                 margin: 0 0 20px 0;
+                // text-decoration: none;
+                @include secondary-text;
             }
         }
     }
